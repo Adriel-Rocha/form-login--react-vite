@@ -1,0 +1,38 @@
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  animation: fadein 0.3s ease, fadeout 0.3s ease 4.7s;
+  color: #fff;
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeout {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-10px); }
+}
+
+.info {
+  background-color: #2196F3;
+}
+
+.success {
+  background-color: #4CAF50;
+}
+
+.error {
+  background-color: #F44336;
+}
+
+.warning {
+  background-color: #FF9800;
+}
