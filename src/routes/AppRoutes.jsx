@@ -6,7 +6,7 @@ export default function AppRoutes() {
   return (
     <Router>
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="/form-login--react-vite/login" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </Router>
