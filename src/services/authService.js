@@ -1,5 +1,7 @@
+const apiUrl = 'https://login-auth-api-spring.onrender.com/api/v1';
+
 export async function login(email, password) {
-  const response = await fetch('http://localhost:8080/api/v1/auth/login', {
+  const response = await fetch(apiUrl + '/auth/login', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ email, password })
@@ -14,7 +16,7 @@ export async function login(email, password) {
 }
 
 export async function register(name, email, password) {
-  const response = await fetch('http://localhost:8080/api/v1/auth/register', {
+  const response = await fetch(apiUrl + '/auth/register', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ name, email, password })
@@ -30,7 +32,10 @@ export async function register(name, email, password) {
 
 
 export function logout() {
-  sessionStorage.removeItem('token');
+  sessionStorage.clear();
+  if(sessionStorage.getItem('token')) {
+    sessionStorage.removeItem('token');
+  }
 }
 
 export function isAuthenticated() {

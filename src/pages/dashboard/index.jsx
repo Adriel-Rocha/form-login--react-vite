@@ -16,7 +16,7 @@ export default function Dashboard() {
     <>
         <h2>Dashboard! <br />
         Wellcome { sessionStorage.getItem('name') }.</h2>
-        <p>For made your logout click <a href='/login' onClick={logout}>here</a></p>
+        <p>For made your logout click <a href='' onClick={logout}>here</a></p>
     </>
   )
 }

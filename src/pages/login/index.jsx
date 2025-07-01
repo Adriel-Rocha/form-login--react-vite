@@ -64,7 +64,7 @@ export default function Login() {
             const data = await login(email, password);
             sessionStorage.setItem('name', data.name);
             sessionStorage.setItem('token', data.token);
-            window.location.href = '/dashboard';
+            navigate('/dashboard');
         } catch (err) {
             setError(err.message);
         } finally {
@@ -98,7 +98,7 @@ export default function Login() {
             const data = await register(name, email, password);
             sessionStorage.setItem('name', data.name);
             sessionStorage.setItem('token', data.token);
-            window.location.href = '/dashboard';
+            navigate('/dashboard');
         } catch (err) {
             setError(err.message);
         } finally {
